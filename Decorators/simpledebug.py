@@ -3,7 +3,7 @@ import time
 
 def decorator(func):
     """Boilerplate decorator code"""
-    @functools.wraps(func)
+    @functools.wraps(func) # this ensures that the functions metadatat is not messed up.
     def wrapper_decorator(*args, **kwargs):
         # Do something before
         value = func(*args, **kwargs)
@@ -38,3 +38,25 @@ from memory_profiler import profile
  
  # @profile(precision=?)
  # https://github.com/pythonprofilers/memory_profiler
+
+
+
+class Debugger(object):
+    import logging
+
+    logging.basicConfig(level=logging.DEBUG)
+    logger = logging.getLogger("Debugger")
+    """ Debug a method and return it back"""
+
+    enabled = False
+
+    def __init__(self, func):
+        self.func = func
+
+    def __call__(self, *args, **kwargs):
+        if self.enabled:
+            self.logger.debug(f'Entering : {self.func.__name__}')
+            self.logger.debug(f'args, kwargs : {args, kwargs}')
+            self.logger.debug(f'{self.func.__name__} returned : {self.func(*args, **kwargs)}')
+
+        return self.func(*args, **kwargs)
