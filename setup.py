@@ -15,14 +15,12 @@ setup(
         description=DESCRIPTION,
         long_description=LONG_DESCRIPTION,
         packages=find_packages(),
-        install_requires=[
-               'functools',
+        install_requires=['functools',
                'time',
                'logging',
                'matplotlib',
                'seaborn',
-               'numpy',
-                            ], 
+               'numpy'], 
         url="",
         
         keywords=['python', 'debugging'],
