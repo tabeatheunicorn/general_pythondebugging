@@ -11,7 +11,6 @@ setup(
         version=VERSION,
         author="Tabea Röthemeyer",
         author_email="tabea.roethemeyer@gruppe.ai",
-        packages=['generic_helpermodule'],
         scripts=[],
         description=DESCRIPTION,
         long_description=LONG_DESCRIPTION,
