@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.0.1' 
+VERSION = '0.0.2' 
 DESCRIPTION = 'Debugging Functions and Decorators useful within any project'
 LONG_DESCRIPTION = 'Libary of often useful functions that are collected to be maintained here.'
 
