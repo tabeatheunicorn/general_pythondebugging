@@ -47,6 +47,9 @@ class Debugger(object):
         if self.enabled:
             self.logger.debug(f'Entering : {self.func.__name__}')
             self.logger.debug(f'args, kwargs : {args, kwargs}')
-            self.logger.debug(f'{self.func.__name__} returned : {self.func(*args, **kwargs)}')
-
-        return self.func(*args, **kwargs)
+            result = self.func(*args, **kwargs)
+            self.logger.debug(f'{self.func.__name__} returned : {result}')
+            retunr result
+         else:
+            self.logger.debug(f'Not enabled, just calling the function.')
+            return self.func(*args, **kwargs)
