@@ -7,7 +7,7 @@ LONG_DESCRIPTION = 'Libary of often useful functions that are collected to be ma
 # Setting up
 setup(
        # the name must match the folder name 'verysimplemodule'
-        name="GenericHelpermodule", 
+        name="generichelpermodule", 
         version=VERSION,
         author="Tabea Röthemeyer",
         author_email="tabea.roethemeyer@gruppe.ai",
