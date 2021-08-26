@@ -16,7 +16,6 @@ setup(
         long_description=LONG_DESCRIPTION,
         packages=find_packages(),
         install_requires=[
-               'logging',
                'matplotlib',
                'seaborn',
                'numpy'], 
