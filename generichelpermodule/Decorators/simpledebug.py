@@ -33,14 +33,6 @@ def call_counter(func):
     helper.calls = 0
     return helper
 
-## memory profiling:
-from memory_profiler import profile
- 
- # @profile(precision=?)
- # https://github.com/pythonprofilers/memory_profiler
-
-
-
 class Debugger(object):
     import logging
 
