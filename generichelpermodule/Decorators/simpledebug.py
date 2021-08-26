@@ -50,6 +50,6 @@ class Debugger(object):
             result = self.func(*args, **kwargs)
             self.logger.debug(f'{self.func.__name__} returned : {result}')
             return result
-         else:
+        else:
             self.logger.debug(f'Not enabled, just calling the function.')
             return self.func(*args, **kwargs)
