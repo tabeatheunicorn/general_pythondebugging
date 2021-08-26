@@ -35,8 +35,6 @@ def call_counter(func):
 
 class Debugger(object):
     import logging
-
-    logging.basicConfig(level=logging.DEBUG)
     logger = logging.getLogger("Debugger")
     """ Debug a method and return it back"""
 
