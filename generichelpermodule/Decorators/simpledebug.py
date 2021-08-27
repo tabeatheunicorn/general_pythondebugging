@@ -44,8 +44,7 @@ from memory_profiler import profile
 class Debugger(object):
     import logging
 
-    logging.basicConfig(level=logging.DEBUG)
-    logger = logging.getLogger("Debugger")
+    logger = logging.getLogger(f"{__file__}.Debugger")
     """ Debug a method and return it back"""
 
     enabled = False
