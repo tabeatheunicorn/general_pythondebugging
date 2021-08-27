@@ -33,14 +33,6 @@ def call_counter(func):
     helper.calls = 0
     return helper
 
-## memory profiling:
-from memory_profiler import profile
- 
- # @profile(precision=?)
- # https://github.com/pythonprofilers/memory_profiler
-
-
-
 class Debugger(object):
     import logging
 
@@ -56,6 +48,9 @@ class Debugger(object):
         if self.enabled:
             self.logger.debug(f'Entering : {self.func.__name__}')
             self.logger.debug(f'args, kwargs : {args, kwargs}')
-            self.logger.debug(f'{self.func.__name__} returned : {self.func(*args, **kwargs)}')
-
-        return self.func(*args, **kwargs)
+            result = self.func(*args, **kwargs)
+            self.logger.debug(f'{self.func.__name__} returned : {result}')
+            return result
+        else:
+            self.logger.debug(f'Not enabled, just calling the function.')
+            return self.func(*args, **kwargs)
